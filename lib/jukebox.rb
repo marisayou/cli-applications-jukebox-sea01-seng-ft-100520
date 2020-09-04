@@ -11,9 +11,10 @@ def play(songs)
   input = gets.strip
   if songs.any? {|song| song === input}
     puts "Playing #{input}"
-  elsif input.to_int
+  elsif input.to_i > 0 && input.to_i <= songs.length
+    puts "Playing #{songs[input.to_i - 1]}"
   else 
-    puts "Playing #{input}"
+    puts "Please"
   end
 end
 

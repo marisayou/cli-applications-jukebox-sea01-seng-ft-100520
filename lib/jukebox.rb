@@ -22,8 +22,10 @@ def play
   
 end
 
-def list 
-  
+def list(songs)
+  for i in 0...songs.length
+    puts "#{i+1}. #{songs[i]}"
+  end
 end
 
 def exit_jukebox

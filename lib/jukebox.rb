@@ -9,8 +9,9 @@ end
 def play(songs)
   puts "Please enter a song name or number: "
   input = gets.strip
-  if !songs.any? {|song| song === input}
-    puts "Invalid input, please try again"
+  if songs.any? {|song| song === input}
+    puts "Playing #{input}"
+  elsif input.to_int
   else 
     puts "Playing #{input}"
   end

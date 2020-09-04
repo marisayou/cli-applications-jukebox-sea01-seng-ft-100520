@@ -33,13 +33,15 @@ def run
   input = gets.strip
   if input === "help"
     help
+    run
   elsif input === "play"
     play(songs)
-  else
+    run
+  elsif input === "list"
     list(songs)
+    run
+  else
+    exit_jukebox
   end
-  run
-  end
-  exit_jukebox
 end
 

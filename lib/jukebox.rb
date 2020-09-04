@@ -36,7 +36,7 @@ def run
       help
     elsif input === "play"
       play(songs)
-    elsif input === "list"
+    else
       list(songs)
     end
     run

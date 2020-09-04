@@ -19,7 +19,12 @@ def help
 end
 
 def play(songs)
-  
+  puts "Please enter a song name or number: "
+  input = gets.strip
+  if !songs.any? {|song| song === input}
+    puts "Invalid input, please try again"
+  else 
+    puts "Playing #{input}"
 end
 
 def list(songs)

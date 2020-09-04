@@ -33,13 +33,13 @@ def run(songs)
   input = gets.strip
   if input === "help"
     help
-    run
+    run(songs)
   elsif input === "play"
     play(songs)
-    run
+    run(songs)
   elsif input === "list"
     list(songs)
-    run
+    run(songs)
   else
     exit_jukebox
   end
